@@ -1,30 +1,39 @@
 import React, { useState } from "react";
 
-function AddItem() {
-  const [inputValue, setInputValue] = useState("");
+function TodoApp() {
+  const [tasks, setTasks] = useState<string[]>([]);
+  const [task, setTask] = useState("");
 
-  const handleInputChange = (event: any) => {
-    setInputValue(event.target.value);
+  const addTask = () => {
+    if (task.trim()) {
+      setTasks([...tasks, task]);
+      setTask("");
+    }
   };
 
-  const handleButtonClick = () => {
-    alert(`You entered: ${inputValue}`);
+  const deleteTask = (index: number) => {
+    setTasks(tasks.filter((_, i) => i !== index));
   };
 
   return (
     <div style={{ padding: "20px" }}>
+      <h1>To-Do List</h1>
       <input
         type="text"
-        value={inputValue}
-        onChange={handleInputChange}
-        placeholder="Type something..."
-        style={{ marginRight: "10px", padding: "5px" }}
+        value={task}
+        onChange={(e) => setTask(e.target.value)}
+        placeholder="Add a new task"
       />
-      <button onClick={handleButtonClick} style={{ padding: "5px 10px" }}>
-        Submit
-      </button>
+      <button onClick={addTask}>Add</button>
+      <ul>
+        {tasks.map((t, index) => (
+          <li key={index}>
+            {t} <button onClick={() => deleteTask(index)}>Delete</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
 
-export default AddItem;
+export default TodoApp;

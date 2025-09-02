@@ -26,6 +26,22 @@ namespace LeetCode_Practice.BST
             }
             return node;
         }
+
+        public bool SearchNode(Leaf_Node node, int key)
+        {
+            if(node == null)
+                return false;
+
+            if(node.key == key)
+                return true;
+
+            if (key < node.key)
+                return SearchNode(node.left, key);
+            else if (key > node.key)
+                return SearchNode(node.right, key);
+
+            return false;
+        }
         public void InorderTraversal(Leaf_Node root)
         {
             if(root != null)
@@ -35,5 +51,7 @@ namespace LeetCode_Practice.BST
                 InorderTraversal(root.right);
             }
         }
+
+        
     }
 }

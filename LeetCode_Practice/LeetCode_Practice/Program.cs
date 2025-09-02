@@ -14,3 +14,5 @@ binarySearchTree.InsertBinaryTree(node, 70);
 binarySearchTree.InsertBinaryTree(node, 60);
 
 binarySearchTree.InorderTraversal(node);
+
+Console.WriteLine(binarySearchTree.SearchNode(node, 45));

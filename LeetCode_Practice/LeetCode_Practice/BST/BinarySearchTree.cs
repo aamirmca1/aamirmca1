@@ -51,7 +51,26 @@ namespace LeetCode_Practice.BST
                 InorderTraversal(root.right);
             }
         }
-
         
+        public int DepthOfTree(Leaf_Node root)
+        {
+            if(root == null)
+                return 0;
+
+            int heightLeft = DepthOfTree(root.left);
+            int heightRight = DepthOfTree(root.right);
+
+            return Math.Max(heightLeft, heightRight) + 1;
+
+        }
+        public bool SameTree(Leaf_Node p, Leaf_Node q)
+        {
+            if (p == null && q == null)
+                return true;
+            if(p== null || q == null) return false;
+
+            return (p.key == q.key && SameTree(p.left, q.left) && SameTree(q.right, p.right));
+
+        }
     }
 }

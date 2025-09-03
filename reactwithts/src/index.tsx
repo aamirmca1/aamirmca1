@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import MyFruitsList from './ToDoList/AddTask';
-import { Car} from './DemoCom';
+// import MyFruitsList from './ToDoList/AddTask';
+// import { Car } from './Vehicle';
+//import Football from './ReactTestComponent/Football';
 import reportWebVitals from './reportWebVitals';
+import MyForm from './ReactTestComponent/MyForm';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <Car />
-  </React.StrictMode>
+  <App></App>
 );
 
 // If you want to start measuring performance in your app, pass a function

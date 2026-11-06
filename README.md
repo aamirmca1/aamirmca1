@@ -6,7 +6,7 @@ Expert in .NET, React, Typescript, Azure and Web API
 
 I am experience full stack developer in design, architect & development of .NET based solutions using C#, ASP.NET MVC, React, Typescript, Web API's, Bootstrap and SQL Server.
 
-* 🌍  I'm based in Redmond, WA
+* 🌍  I'm based in Dallas, TX
 * ✉️  You can contact me at [aamir2304@outlook.com](mailto:aamir2304@outlook.com)
 * 🧠  I'm currently learning Python, MCP servers
 * 👥  I'm looking to collaborate on Projects in AI
